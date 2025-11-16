@@ -1,0 +1,133 @@
+/* Import Google Fonts (Pacifico for header, Poppins for body) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap');
+
+/* Basic Reset and Body Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ffc0cb 0%, #a9c6e9 100%); /* Soft gradient background (Pink to Light Blue) */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Card Container */
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* ---------------------------------- */
+/* STYLING UNTUK INTRO DAN TOMBOL */
+/* ---------------------------------- */
+
+.intro {
+    transition: opacity 0.5s ease-out, max-height 0.5s ease-out, padding 0.5s ease-out;
+    overflow: hidden;
+}
+
+.intro h2 {
+    color: #ff69b4;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+#openButton {
+    background-color: #ff69b4; /* Hot Pink */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1em;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+#openButton:hover {
+    background-color: #e55c9b;
+}
+
+#openButton:active {
+    transform: scale(0.98);
+}
+
+/* ---------------------------------- */
+/* STYLING PESAN UTAMA (DISEMBUNYIKAN AWALNYA) */
+/* ---------------------------------- */
+
+.message-content {
+    display: none; /* Sembunyikan secara default */
+    opacity: 0; /* Untuk animasi fade-in */
+    transition: opacity 1.5s ease-in;
+}
+
+.fade-in-active {
+    opacity: 1; /* Tampilkan setelah tombol diklik */
+}
+
+
+/* ---------------------------------- */
+/* STYLING PESAN UTAMA (SAMA SEPERTI SEBELUMNYA) */
+/* ---------------------------------- */
+
+.header h1 {
+    font-family: 'Pacifico', cursive;
+    color: #ff69b4;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #ffe4e1;
+    padding-bottom: 15px;
+}
+
+.section {
+    margin-bottom: 30px;
+    padding: 15px;
+    border-left: 5px solid #a9c6e9;
+    text-align: left;
+    background-color: #f7f9fc;
+    border-radius: 10px;
+}
+
+.section h2, .section h3 {
+    color: #4682b4;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.apology-promise {
+    background-color: #fff0f5;
+    border-left-color: #ff69b4;
+    padding: 20px;
+}
+
+.footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 3px dashed #ffc0cb;
+    font-size: 1.1em;
+    font-weight: 700;
+    color: #e57373;
+    text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .card {
+        padding: 20px;
+    }
+    .header h1 {
+        font-size: 1.8em;
+    }
+}

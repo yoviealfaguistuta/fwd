@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Sayangku! ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="card">
+        <div class="intro" id="introSection">
+            <h2>Surat Rahasia untuk Pipin 💌</h2>
+            <p>Aku punya sesuatu yang spesial buat kamu, Sayang. Tekan tombol di bawah ini ya!</p>
+            <button id="openButton" onclick="openMessage()">Buka Pesan Ulang Tahunku! ✨</button>
+        </div>
+
+        <div class="message-content" id="messageContent">
+            <div class="header">
+                <h1>Happy birthday sayaangkuuu cintakuuuu calon istrikuuuu ❤️😍😘😻🥰</h1>
+            </div>
+
+            <div class="section birthday-wish">
+                <h2>Selamat bertambah usia, Sayangku.</h2>
+                <p>Selamat berpetualang di chapter berikutnya! 🤗🤠 Semoga di usia yang semakin bertambah ini, bakal ada banyak kebahagiaan yang datang, dimudahkan segala urusan, dan selalu dikelilingi dengan orang-orang baik. Aamiin. 🤍🩵🤍🩵🤍🩵🤍🩵🤍🩵🤍</p>
+            </div>
+
+            <div class="section reflection">
+                <p>Sayang, terima kasih ya, karena kamu udah berhasil ngalahin egomu dan kita masih sama-sama sampai sekarang. Kita bisa ngerayain ulang tahunmu yang ketiga kalinya. Aku sedih banget rasanya kita kaya kemarin. Maafin aku ya, Sayang, kalau aku masih banyak salah. 🥺 Aku bakal belajar untuk lebih baik lagi demi hubungan kita. Aku sayang banget sama kamu, aku bangga banget punya **cewe terbaikk kaya kamu!** 🤩🤗🫶🌈</p>
+            </div>
+
+            <div class="section apology-promise">
+                <h3>Permintaan Maaf & Janji</h3>
+                <p>Aku minta maaf ya kalau akhir-akhir ini hubungan kita jadi kacau dan bikin kamu sedih. 🥺 Aku tahu, mungkin aku banyak salah. Tapi yang paling penting, aku nggak mau kita terus-terusan gini. Aku sayang banget sama kamu dan aku nggak mau kehilangan kamu.</p>
+                <p>Aku yakin banget kita pasti bisa ngelewatin masa-masa sulit ini. Kita udah sejauh ini, Sayang. **Fokus kita tetap sama: kita bakal nikah.** Aku janji, aku bakal belajar buat jadi cowok yang lebih baik lagi buat kamu. Maafin Iyop ya, Sayang. Ayoo kita perbaikin sama sama hubungan ini 🫂</p>
+            </div>
+
+            <div class="section character">
+                <p>Ayanggku yang cantik, baik hati, pekerja keras, penyayang, bertanggung jawab, dan masih banyak lagi sifat baik lainnya. Aku harap semoga kamu nggak berubah ya, Sayang. Tetap jadi **pipin** yang iyop kenal. Aku nggak mau lihat kamu jadi orang asing. Kamu bisa, kan? </p>
+            </div>
+
+            <div class="section prayer">
+                <p>Aku berdoa, semoga kita dilancarkan rezekinya untuk nikah, beli rumah, mobil, dan hidup dengan layak nantinya.  (ﾉ◕ヮ◕)ﾉ✨🙏🎂😍✨</p>
+            </div>
+
+            <div class="section funny-ending">
+                <p>Maaf ya, Sayang, di ulang tahun kali ini aku belum bisa beliin **iphonee**. Gapapa ya, Ayaang, nanti kita maling aja dulu! 😏😆 Aku bakal mencuri iphone terbaru buat pacar aku tercintaaa. Gapapa aku dipenjara, yang penting Ayaang happy! Yuhuuu! ＼(≧▽≦)／✨🎉🎂🥰💋😋🎈🥳</p>
+            </div>
+
+            <div class="footer">
+                <p>Sekali lagi, Happy Birthday **pacarku yang cantik dan tersayanggggg**! *I love you sooooo much!* Muahhh muahhhh muahhh muahh muahhh muahhh. Sampai ketemu sebentar lagi ya sayaang ❤️🥰😘😍😘🥰💋❤️‍🔥🥳✨🌈🎂🎈🎁🎉🎊❤️🥰😍💋🥳🩵🎈✨🤍🩵🤩✨</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function openMessage() {
+            const intro = document.getElementById('introSection');
+            const content = document.getElementById('messageContent');
+            
+            // Sembunyikan intro section
+            intro.style.opacity = '0';
+            intro.style.maxHeight = '0';
+            intro.style.padding = '0';
+            setTimeout(() => {
+                intro.style.display = 'none';
+            }, 500); // Tunggu sampai animasi opacity selesai
+
+            // Tampilkan pesan dengan animasi fade-in
+            content.style.display = 'block';
+            setTimeout(() => {
+                content.classList.add('fade-in-active');
+            }, 10); // Memberi jeda kecil agar animasi berjalan
+        }
+    </script>
+</body>
+</html>
