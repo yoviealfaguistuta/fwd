@@ -8,12 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
+    <audio id="birthdayAudio" src="audio.mp3" loop preload="auto"></audio>
     <div class="card">
         <div class="intro" id="introSection">
             <h2>Surat Rahasia untuk Pipin 💌</h2>
             <p>Aku punya sesuatu yang spesial buat kamu, Sayang. Tekan tombol di bawah ini ya!</p>
-            <button id="openButton" onclick="openMessage()">Buka Pesan Ulang Tahunku! ✨</button>
+            <button id="openButton" onclick="playAudioAndOpenMessage()">Buka Pesan Ulang Tahunku! ✨</button>
         </div>
 
         <div class="message-content" id="messageContent">
@@ -55,6 +55,20 @@
     </div>
     
     <script>
+
+        function playAudioAndOpenMessage() {
+            const audio = document.getElementById('birthdayAudio');
+            
+            // Coba putar audio. Ini akan berhasil karena dipicu oleh klik user (interaksi)
+            audio.play().catch(error => {
+                console.log("Autoplay was prevented, or error playing audio:", error);
+                // Jika gagal, mungkin berikan pesan atau feedback lain
+            });
+            
+            // Lanjutkan ke fungsi openMessage yang sudah ada
+            openMessage();
+        }
+
         function openMessage() {
             const intro = document.getElementById('introSection');
             const content = document.getElementById('messageContent');
